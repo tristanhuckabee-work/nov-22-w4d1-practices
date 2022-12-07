@@ -38,7 +38,18 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  // Your code here
+  let counter = array.length;
+
+  for (let i = 0; i < array.length; i++) {
+    let el = array[i];
+
+    if ( !cb( el, i ) ) {
+      counter--;
+    }
+  }
+  
+  if ( counter === 1 ) return true;
+  return false;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
