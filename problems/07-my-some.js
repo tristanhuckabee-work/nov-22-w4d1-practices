@@ -32,6 +32,9 @@ function mySome(array, cb) {
     }
   }
   return false;
+
+  // Gregs one-line solution: 
+  // return array.filter( (el, i) => cb(el, i) ).length > 0;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
