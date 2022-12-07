@@ -38,19 +38,20 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  let counter = array.length;
+  let counter = array.length;              // counts how many trues
 
   for (let i = 0; i < array.length; i++) {
-    let el = array[i];
+    let el = array[i];  // helper variable
 
-    if ( !cb( el, i ) ) {
-      counter--;
+    if ( !cb( el, i ) ) {  // if return is false
+      counter--;           // decrement our counter
     }
   }
   
-  if ( counter === 1 ) return true;
-  return false;
+  if ( counter === 1 ) return true; //if counter has 1 true
+  return false;                     //no trues, or many trues
 }
+// test for repo
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
