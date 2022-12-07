@@ -28,7 +28,11 @@ console.log(result4); // true
 *******************************************************************************/
 
 function exactly(array, num, cb) {
-  // Your code here
+  let count = 0;
+
+  array.forEach( el => cb( el ) ? count++ : count += 0 );
+
+  return count === num ? true : false // This is called a ternary
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -27,7 +27,11 @@ console.log(result4); // 0
 *******************************************************************************/
 
 function count(array, cb) {
-  // Your code here
+  let count = 0;
+
+  array.forEach( el => cb( el ) ? count++ : count += 0 );
+
+  return count;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
